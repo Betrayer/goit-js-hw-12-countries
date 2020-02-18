@@ -2,7 +2,7 @@ import countryTemplate from './countryTemplate.hbs';
 import fetchCountries from './fetchCountries.js';
 import PNotify from '../node_modules/pnotify/dist/es/PNotify.js';
 import '../node_modules/pnotify/dist/PNotifyBrightTheme.css'
-import { debounce } from 'lodash';
+import debounce from 'lodash.debounce';
 import './styles.css';
 
 const inputForm = document.querySelector('input');
