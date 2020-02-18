@@ -22,7 +22,10 @@ function countryResult(array) {
       text: 'Try to be more specific!',
     });
   } else if (array.length > 1 && array.length <= 10) {
-    console.log('At least there is no errors');
+    whereToAdd.insertAdjacentHTML(
+      'afterbegin',
+      array.reduce((acc, element) => (acc += `<li>${element.name}</li>`), ''),
+    );
   } else if (array.length === 1) {
     whereToAdd.insertAdjacentHTML(
       'afterbegin',
